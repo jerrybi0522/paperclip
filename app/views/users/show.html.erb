@@ -1,0 +1,9 @@
+<%= form_for @user, html: { multipart: true } do |f| %>
+	<div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+    <%= f.submit :update %>
+  </div>
+<% end %>
+
+<%= image_tag @user.avatar.url %>
